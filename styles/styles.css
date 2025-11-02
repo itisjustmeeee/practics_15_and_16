@@ -1,8 +1,8 @@
 .custom-header {
     position: relative;
     background: url('../images/sun.gif') center/cover no-repeat;
-    min-height: 150px;  /* ← фиксированная высота */
-    color: white;  /* ← белый текст */
+    min-height: 150px;
+    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -21,7 +21,11 @@
 }
 
 .bg-custom-backgroud{
-    background: linear-gradient(135deg, rgb(76, 0, 255), rgb(187, 0, 255));
+    background: linear-gradient(135deg, rgb(136, 91, 240), rgb(202, 106, 237));
+}
+
+.text-custom {
+    color:rgb(234, 145, 21)
 }
 
 @media (max-width: 760px) {
@@ -34,12 +38,22 @@
     }
 }
 
-.zoomable-image {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
+.bg-light-custom {
+    position: relative;
+    background: url('../images/main_fon_gif.gif') center/cover no-repeat;
+    min-height: 70px;
+    color: white;
 }
 
-.zoomable-image.zoomed {
-  transform: scale(1.5);
+.bg-main-custom{
+    position: relative;
+    background: url('../images/main.gif') center/cover no-repeat;
+}
+
+.card-shadow-custom {
+    box-shadow: 3px 3.4px 10px rgba(18, 255, 176, 0.7);
+}
+
+.bg-c {
+    background: linear-gradient(136deg, #510dfc, #9c75ff);
 }
