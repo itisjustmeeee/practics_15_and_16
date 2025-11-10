@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -9,138 +10,157 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <title>Контрольняа работа 2</title>
 </head>
-<body class = "bg-main-custom">
-    <div class="container-fluid p-0">
-        <header class="custom-header py-4">
-            <div class = "container header-content">
-                <div class = "row align-items-center">
-                    <div class = "col">
-                        <h2 class = "h3 mb-1 d-flex align-items-center">
-                            <img src="../images/icons/coffee_to_go_icon.ico" alt="new icon" class="me-2" style="width: 80px; height: 80px;">Гузаирова Ольга Ринатовна
-                        </h2>
-                    </div>
+<body class = "page">
+    <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
+    <div class="bg-main-custom">
+        <div class="container-fluid p-0">
+            <header class="custom-header_v2 py-4 sticky-top position-relative overflow-hidden bg-white shadow-sm" role="banner">
+                <div class="header-gif-bg">
+                    <picture>
+                        <img src="../images/sun.webp" alt="fon for header" class="header-gif" loading="eager" fetchpriority="high" decoding="async">
+                    </picture>
                 </div>
-            </div>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light text-white bg-custom-backgroud">
-            <div class = "container-fluid">
-                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
-                    <span class = "navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id = "navbarNav">
-                    <ul class = "navbar-nav w-100 justify-content-between">
-                        <li class = "nav-item">
-                            <a class="nav-link" href="../index.html">
-                                <i class="bi bi-house me-1"></i>Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="projects.html">
-                                <i class="bi bi-stars me-1"></i>Проекты
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="diary.html">
-                                <i class="bi bi-calendar3 me-1"></i>Дневник
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacts.html">
-                                <i class="bi bi-cloud-upload-fill me-1"></i>Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <main class="container my-4">
-            <section class="mb-5 card-shadow-custom">
-                <div class="card shadow">
-                    <div class="card-header bg-light text-center">
-                        <h4 class="card-title h5 mb-0">
-                            <i class="bi bi-exclamation-triangle-fill text-primary"></i>
-                            Мои проекты
-                            <i class="bi bi-exclamation-triangle-fill text-primary"></i>
-                        </h4>
-                    </div>
-                    <div class="card-body d-flex flex-row justify-content-center">
-                        <div class="flex-shrink-0 me-3">
-                            <p class="card-text mb-0">Языки, используемые в проектах</p>
-                        </div>
-                        <div class="d-flex gap-2 flex-wrap">
-                            <span class="badge bg-primary">HTML</span>
-                            <span class="badge bg-dark">CSS</span>
-                            <span class="badge bg-danger">QT</span>
-                            <span class="badge bg-info">JavaScript</span>
-                            <span class="badge bg-warning">Python</span>
-                            <span class="badge bg-success">C++</span>
+                <div class = "container position-relative z-10 header-content">
+                    <div class = "row align-items-center">
+                        <div class = "col">
+                            <h2 class = "h3 mb-1 d-flex align-items-center">
+                                <img src="../images/icons/coffee_to_go_icon.ico" alt="new icon" class="hero__greeting me-2" style="width: 80px; height: 80px;">Гузаирова Ольга Ринатовна
+                            </h2>
                         </div>
                     </div>
                 </div>
-            </div>
-            <section class="mb-5">
-                <div class="row row-cols-1 row-cols-3 g-4 m-1">
-                    <div class="col">
-                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modal1">
-                            <img src="../images/site.gif" class="card-img-top" alt="Личный сайт">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">
-                                    <i class="bi bi-window-sidebar"></i>
-                                    Личный сайт
-                                </h5>
-                                <p class="card-text">Сайт, созданный в рамках этой дисциплины</p>
-                                <button class="btn btn-primary position-relative mt-auto">
-                                    Подробнее
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                        5+
-                                        <span class="visually-hidden">непрочитанные сообщения</span>
-                                    </span>
-                                </button>
+            </header>
+            <nav class="navbar navbar-expand-lg nav navbar-light bg-custom-backgroud" role="navigation">
+                <div class = "container-fluid">
+                    <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
+                        <span class = "navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id = "navbarNav">
+                        <ul class = "navbar-nav w-100 justify-content-between">
+                            <li class = "nav-item">
+                                <a class="nav-link" href="../index.html">
+                                    <i class="bi bi-house me-1"></i>Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="projects.html">
+                                    <i class="bi bi-stars me-1"></i>Проекты
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="diary.html">
+                                    <i class="bi bi-calendar3 me-1"></i>Дневник
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacts.html">
+                                    <i class="bi bi-cloud-upload-fill me-1"></i>Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="main container my-4" role="main" id="main-content">
+                <section class="mb-5 card-shadow-custom">
+                    <div class="card shadow">
+                        <div class="card-header bg-light text-center">
+                            <h4 class="section-title h5 mb-0">
+                                <i class="bi bi-exclamation-triangle-fill text-primary"></i>
+                                Мои проекты
+                                <i class="bi bi-exclamation-triangle-fill text-primary"></i>
+                            </h4>
+                        </div>
+                        <div class="card-body d-flex flex-row justify-content-center">
+                            <div class="flex-shrink-0 me-3">
+                                <p class="card-text mb-0">Языки, используемые в проектах</p>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-dark">CSS</span>
+                                <span class="badge bg-danger">QT</span>
+                                <span class="badge bg-info">JavaScript</span>
+                                <span class="badge bg-warning">Python</span>
+                                <span class="badge bg-success">C++</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modal2">
-                            <img src="../images/kursach.gif" class="card-img-top" alt="Сдача первого курсача">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">
-                                    <i class="bi bi-dpad-fill"></i>
-                                    Сдача первого курсача
-                                </h5>
-                                <p class="card-text">Разработанное консольное приложение с использованием C++ и QT</p>
-                                <button class="btn btn-primary position-relative mt-auto">
-                                    Подробнее
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                        6+
-                                        <span class="visually-hidden">непрочитанные сообщения</span>
-                                    </span>
-                                </button>
+                </section>
+                <section class="mb-5 section container">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <div class="col">
+                            <div class="card h-100 card-shadow-custom" data-bs-toggle="modal" data-bs-target="#modal1">
+                                <img src="../images/site-ezgif.com-optiwebp.webp" class="card-gif" alt="Личный сайт" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="projects-area">
+                                        <div class="project-list mb-2">
+                                            <h5 class="card-title text-center">
+                                                <i class="bi bi-window-sidebar"></i>
+                                                Личный сайт
+                                            </h5>
+                                            <p class="card-text ">Сайт, созданный в рамках этой дисциплины</p>
+                                            <button class="btn btn-primary position-relative mt-auto">
+                                            Подробнее
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    5+
+                                                    <span class="visually-hidden">непрочитанные сообщения</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 card-shadow-custom" data-bs-toggle="modal" data-bs-target="#modal2">
+                                <img src="../images/kursach-ezgif.com-optiwebp.webp" class="card-gif" alt="Сдача первого курсача" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="projects-area">
+                                        <div class="project-list mb-2">
+                                            <h5 class="card-title text-center">
+                                                <i class="bi bi-dpad-fill"></i>
+                                                Сдача первого курсача
+                                            </h5>
+                                            <p class="card-text">Разработанное консольное приложение с использованием C++ и QT</p>
+                                            <button class="btn btn-primary position-relative mt-auto">
+                                                Подробнее
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    6+
+                                                    <span class="visually-hidden">непрочитанные сообщения</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 card-shadow-custom" data-bs-toggle="modal" data-bs-target="#modal3">
+                                <img src="../images/duzh_gif-ezgif.com-optiwebp.webp" class="card-gif" alt="Участие в конкурсе" loading="lazy">
+                                <div class="card-body d-flex flex-column">
+                                    <div class="projects-area">
+                                        <div class="project-list mb-2">
+                                            <h5 class="card-title text-center">
+                                                <i class="bi bi-card-checklist"></i>
+                                                Участие в конкурсе с простым приложением
+                                            </h5>
+                                            <p class="card-text">Было разработано приложение для генерации паролей на python с простым интерфейсом</p>
+                                            <button class="btn btn-primary position-relative mt-auto">
+                                                Подробнее
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    2+
+                                                    <span class="visually-hidden">непрочитанные сообщения</span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modal3">
-                            <img src="../images/duzh_gif.gif" class="card-img-top" alt="Участие в конкурсе">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title text-center">
-                                    <i class="bi bi-card-checklist"></i>
-                                    Участие в конкурсе с простым приложением
-                                </h5>
-                                <p class="card-text">Было разработано приложение для генерации паролей на python с простым интерфейсом</p>
-                                <button class="btn btn-primary position-relative mt-auto">
-                                    Подробнее
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                        2+
-                                        <span class="visually-hidden">непрочитанные сообщения</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <div class="modal fade" id="modal1" tabindex="-1">
+                </section>
+            </main>
+            <div class="modal fade" id="modal1" tabindex="-1">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
@@ -166,8 +186,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="modal fade" id="modal2" tabindex="-1">
+            <div class="modal fade" id="modal2" tabindex="-1">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header bg-primary text-white">
@@ -217,20 +236,20 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <footer class="bg-light-custom text-white py-4 mt-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="mb-0">&copy; 2025 Личный сайтик. Все права защищены</p>
-                    </div>
-                    <div class="col-md-6 text-md-end">
-                        <a href="pages/contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <footer class="bg-light-custom text-white py-4 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 Личный сайтик. Все права защищены</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

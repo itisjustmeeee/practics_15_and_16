@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -9,222 +10,167 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <title>Контрольняа работа 2</title>
 </head>
-<body class = "bg-main-custom">
-    <div class="container-fluid p-0">
-        <header class="custom-header py-4">
-            <div class = "container header-content">
-                <div class = "row align-items-center">
-                    <div class = "col">
-                        <h2 class = "h3 mb-1 d-flex align-items-center">
-                            <img src="../images/icons/coffee_to_go_icon.ico" alt="new icon" class="me-2" style="width: 80px; height: 80px;">Гузаирова Ольга Ринатовна
-                        </h2>
+<body class = "page">
+    <a href="#main-content" class="skip-link">Перейти к основному контенту</a>
+    <div class="bg-main-custom">
+        <div class="container-fluid p-0">
+            <header class="custom-header_v2 py-4 sticky-top position-relative overflow-hidden bg-white shadow-sm" role="banner">
+                <div class="header-gif-bg">
+                    <picture>
+                        <img src="../images/sun.webp" alt="fon for header" class="header-gif" loading="eager" fetchpriority="high" decoding="async">
+                    </picture>
+                </div>
+                <div class = "container position-relative z-10 header-content">
+                    <div class = "row align-items-center">
+                        <div class = "col">
+                            <h2 class = "h3 mb-1 d-flex align-items-center">
+                                <img src="../images/icons/coffee_to_go_icon.ico" alt="new icon" class="hero__greeting me-2" style="width: 80px; height: 80px;">Гузаирова Ольга Ринатовна
+                            </h2>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light text-white bg-custom-backgroud">
-            <div class = "container-fluid">
-                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
-                    <span class = "navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id = "navbarNav">
-                    <ul class = "navbar-nav w-100 justify-content-between">
-                        <li class = "nav-item">
-                            <a class="nav-link" href="../index.html">
-                                <i class="bi bi-house me-1"></i>Главная
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">
-                                <i class="bi bi-stars me-1"></i>Проекты
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="diary.html">
-                                <i class="bi bi-calendar3 me-1"></i>Дневник
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contacts.html">
-                                <i class="bi bi-cloud-upload-fill me-1"></i>Контакты
-                            </a>
-                        </li>
-                    </ul>
+            </header>
+            <nav class="navbar navbar-expand-lg nav navbar-light bg-custom-backgroud" role="navigation">
+                <div class = "container-fluid">
+                    <button class = "btn navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target="#navbarNav">
+                        <span class = "navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id = "navbarNav">
+                        <ul class = "navbar-nav w-100 justify-content-between">
+                            <li class = "nav-item">
+                                <a class="nav-link" href="../index.html">
+                                    <i class="bi bi-house me-1"></i>Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="projects.html">
+                                    <i class="bi bi-stars me-1"></i>Проекты
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="diary.html">
+                                    <i class="bi bi-calendar3 me-1"></i>Дневник
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="contacts.html">
+                                    <i class="bi bi-cloud-upload-fill me-1"></i>Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        <main class="container my-4">
-            <h1 class="mb-3 text-center text-light">Связь со мной</h1>
-            <div class="row justify-content-center">
-                <div class="mb-3">
+            </nav>
+            <main class="container my-4" role="main" id="main-content">
+                <h1 class="mb-3 text-center text-light">Связь со мной</h1>
+                <div class="row justify-content-center">
+                    <div class="mb-3">
+                        <div class="card shadow">
+                            <div class="card-shadow-custom">
+                                <div class="card-body d-flex flex-column">
+                                    <form id="contactForm" class="needs-validation" novalidate>
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Имя (ник) </label>
+                                            <input type="text" class="form-control" id="name" name="name" required minlength="2" pattern="[А-Яа-яЁёA-Za-z\s\-]+" aria-describedby="name-hint name-error">
+                                            <small id="name-hint" class="visually-hidden">Введите имя или ник</small>
+                                            <span id="name-error" class="visually-hidden text-danger" role="alert"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Телефон </label> 
+                                            <input type="tel" class="form-control" id="phone" name="phone" required pattern="\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}" inputmode="numeric" aria-autocomplete="tel" aria-describedby="phone-hint phone-error">
+                                            <small id="phone-hint" class="visually-hidden">+7 (999) 123-45-67</small>
+                                            <span id="phone-error" class="visually-hidden text-danger" role="alert"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Электронная почта </label> 
+                                            <input type="email" class="form-control" id="email" name="email" required aria-describedby="email-hint email-error">
+                                            <small id="email-hint" class="visually-hidden">example@gmail.com</small>
+                                            <span id="email-error" class="visually-hidden text-danger" role="alert"></span>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="message" class="form-label">Поле для раскрытия темы обращения </label> 
+                                            <textarea class="form-control" id="message" rows="7" name="message" required minlength="10" aria-describedby="message-hint message-error"></textarea>
+                                            <small id="message-hint" class="visually-hidden">Напишите что-то (предложение не меньше 10 символов)</small>
+                                            <span id="message-error" class="visually-hidden text-danger" role="alert"></span>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn btn-secondary">
+                                                [Отправить сообщение]
+                                            </button>
+                                        </div>
+                                    </form>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="mb-3">
                     <div class="card shadow">
-                        <div class="card-body d-flex flex-column">
-                            <form id="contactForm" class="needs-validation" novalidate>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Имя (ник) </label>
-                                    <input type="text" class="form-control" id="name" placeholder="Введите имя или ник" required minlength="2" pattern="[А-Яа-яЁёA-Za-z\s\-]+">
-                                    <div class="invalid-feedback">
-                                        Введите корректное имя (минимум 2 буквы и пробелы)
+                        <div class="card-shadow-custom">
+                            <div class="card-header bg-light text-center">
+                                <h4 class="hero__greeting h5 mb-0">
+                                    <i class="bi bi-person-bounding-box text-info"></i>
+                                    Контакты
+                                </h4>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <div class="projects-area text-center">
+                                    <div class="project-list mb-2">
+                                        <p class="card-text">
+                                            <i class="bi bi-envelope-at-fill text-danger"></i>
+                                            почта: guzairova.o.r@edu.mirea.ru
+                                        </p>
+                                        <p class="card-text">
+                                            <i class="bi bi-github text-github"></i>
+                                            Github: itisjustmeeee
+                                        </p>
+                                        <p class="card-text">
+                                            <i class="bi bi-globe-asia-australia-fill text-primary"></i>
+                                            Москва, Россия
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Телефон </label> 
-                                    <input type="text" class="form-control" id="phone" placeholder="+7 (XXX) XXX-XX-XX" required pattern="\+7\s?\(\d{3}\)\s?\d{3}-\d{2}-\d{2}" inputmode="numeric">
-                                    <div class="invalid-feedback">
-                                        Введите корректный номер в формате: +7 (999) 123-45-67
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Электронная почта </label> 
-                                    <input type="email" class="form-control" id="email" placeholder="example@mail.ru" required>
-                                    <div class="invalid-feedback">
-                                        Введите корректную почту (например: name@domain.ru)
-                                    </div>
-                                </div>
-                                <div class="mb-4">
-                                    <label for="message" class="form-label">Поле для раскрытия темы обращения </label> 
-                                    <textarea class="form-control" id="message" rows="7" placeholder="Напишите здесь что-нибудь" required minlength="10"></textarea>
-                                    <div class="invalid-feedback">
-                                        Сообщение должно содержать как минимум 10 символов
-                                    </div>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="btn btn-secondary">
-                                        [Отправить сообщение]
-                                    </button>
-                                </div>
-                            </form>
-                        </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="bg-light-custom text-white py-4 mt-5">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="mb-0">&copy; 2025 Личный сайтик. Все права защищены</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="pages/contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <section class="mb-3">
-                <div class="card shadow">
-                    <div class="card-header bg-light text-center">
-                        <h4 class="card-title h5 mb-0">
-                            <i class="bi bi-person-bounding-box text-info"></i>
-                            Контакты
-                        </h4>
-                    </div>
-                    <div class="card-body d-flex flex-column">
-                        <p class="card-text">
-                            <i class="bi bi-envelope-at-fill text-danger"></i>
-                            почта: guzairova.o.r@edu.mirea.ru
-                        </p>
-                        <p class="card-text">
-                            <i class="bi bi-github text-github"></i>
-                            Github: itisjustmeeee
-                        </p>
-                        <p class="card-text">
-                            <i class="bi bi-globe-asia-australia-fill text-primary"></i>
-                            Москва, Россия
-                        </p>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header bg-success text-white">
-                        <h4 class="modal-title">
-                            <i class="bi bi-check-circle-fill me-2"></i>
-                            Сообщение отправлено!
-                        </h4>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body text-center">
-                        <p class="mb-0" id="modalMessage">Спасибо, <strong>Имя</strong>!<br>Ваше сообщение успешно отправлено.</p>
-                    </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">
-                        Закрыть
-                        </button>
+            </footer>
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h4 class="modal-title">
+                                <i class="bi bi-check-circle-fill me-2"></i>
+                                Сообщение отправлено!
+                            </h4>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <p class="mb-0" id="modalMessage">Спасибо, <strong>Имя</strong>!<br>Ваше сообщение успешно отправлено.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">
+                            Закрыть
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../scripts/contacts.js"></script>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        (() => {
-            'use strict';
-
-            const form = document.getElementById('contactForm');
-            const phoneInput = document.getElementById('phone');
-
-            phoneInput.addEventListener('input', function (e) {
-                let value = e.target.value.replace(/\D/g, '');
-
-                if (value.length > 11) value = value.slice(0, 11);
-
-                if (value.startsWith('8')) value = '7' + value.slice(1);
-                if (!value.startsWith('7') && value.length > 0) value = '7' + value;
-
-                let formatted = '+7 ';
-                if (value.length > 1) formatted += '(' + value.slice(1, 4);
-                if (value.length >= 4) formatted += ') ';
-                if (value.length > 4) formatted += value.slice(4, 7);
-                if (value.length > 7) formatted += '-' + value.slice(7, 9);
-                if (value.length > 9) formatted += '-' + value.slice(9, 11);
-
-                e.target.value = formatted;
-            });
-
-            phoneInput.addEventListener('focus', function () {
-                if (!this.value) this.value = '+7 ';
-            });
-
-            phoneInput.addEventListener('blur', function () {
-                if (this.value === '+7 ') this.value = '';
-            });
-
-            form.addEventListener('submit', function (e) {
-                if (!form.checkValidity()) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    form.classList.add('was-validated');
-                    return;
-                }
-
-                e.preventDefault();
-
-                const data = {
-                    name: form.name.value.trim(),
-                    email: form.email.value.trim(),
-                    phone: form.phone.value.trim(),
-                    message: form.message.value.trim()
-                };
-
-                modalMessage.innerHTML = `
-                    Спасибо, <strong>${data.name}</strong>!<br>
-                    Ваше сообщение успешно отправлено. Я отвечу вам позже XD<br>
-                    <small class="text-muted">Телефон: ${data.phone}</small>
-                `;
-
-                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                successModal.show();
-
-                form.reset();
-                form.classList.remove('was-validated');
-                phoneInput.value = '';
-
-                console.log('Отправлено:', data);
-            }, false);
-
-        })();
-    </script>
-    <footer class="bg-light-custom text-white py-4 mt-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p class="mb-0">&copy; 2025 Личный сайтик. Все права защищены</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="pages/contacts.html" class="text-white text-decoration-underline me-3">Контакты</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>

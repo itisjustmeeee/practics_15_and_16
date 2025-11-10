@@ -1,6 +1,6 @@
-# Практические работы 13-14
+# Практические работы 15-16
 ## Проект
 Этот репозиторий является частью контрольной работы №3 по фронтэнду и бэкэнду
 
 ## Ссылки   
-- [Публичная страница на Github Pages](https://itisjustmeeee.github.io/control_work_2/)
+- [Публичная страница на Github Pages](https://itisjustmeeee.github.io/practics_15_and_16/)
