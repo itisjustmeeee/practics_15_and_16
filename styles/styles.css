@@ -323,8 +323,8 @@ picture {
 .milg-photo {
     width: 100%;
     height: auto;
-    max-width: 800px;                    /* максимум на десктопе */
-    aspect-ratio: 16 / 10;               /* или подгони под своё фото */
+    max-width: 800px;
+    aspect-ratio: 16 / 10;
     object-fit: cover;
     object-position: center;
     border-radius: .75rem;
